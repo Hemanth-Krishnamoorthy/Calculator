@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claculator</title>
+
+    <style> 
+        body{
+             background-image: url('https://image.slidesdocs.com/responsive-images/background/handdrawn-style-blue-cute-education-math-lovely-powerpoint-background_a698b5341c__960_540.jpg');
+             background-repeat: no-repeat;
+             background-size: cover;
+             display:flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+        }
+        input {
+             width: 98%; 
+             height: 80px;
+             font-size: 30px; 
+             text-align: right;
+        }
+        button {
+             width: 80px;
+             height: 80px;
+             font-size: 30px;
+             background-color: rgb(163, 225, 222); 
+             color: rgb(26, 4, 4);                
+             border-radius: 30px;          
+             cursor: pointer; 
+             box-shadow: 0 4px 0px ;
+         }
+         button:hover{
+             background-color: rgb(60, 84, 84);
+         }
+         .clear-btn{
+             background-color: brown;
+         }
+         .clear-btn:hover{
+             background-color: blueviolet;
+         }
+         .eq{
+             background-color: rgb(14, 164, 72);
+         }
+         .eq:hover{
+             background-color: rgb(27, 74, 47);
+         }
+        
+         #display{
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/196/242/small_2x/cloud-abstract-background-in-blue-and-yellow-gradient-color-vector.jpg');
+         }
+
+        
+    </style>
+</head>
+<body>
+ 
+    <table border="4" align="center"; >
+        <tr>
+            <td colspan="4"><input type="text" id="display"> </td>
+        </tr>
+        <tr align="center">
+            <td><button type="button" onclick="press('7')">7</button></td>
+            <td><button type="button" onclick="press('8')">8</button></td>
+            <td><button type="button" onclick="press('9')">9</button></td>
+            <td><button class="clear-btn" type="button" onclick="press('Backspace')">C</button></td>
+        </tr>
+        <tr align="center">
+            <td><button type="button" onclick="press('4')">4</button></td>
+            <td><button type="button" onclick="press('5')">5</button></td>
+            <td><button type="button" onclick="press('6')">6</button></td>
+            <td><button type="button" onclick="press('+')">+</button></td>
+            
+        </tr>
+        <tr align="center">
+            <td><button type="button" onclick="press('1')">1</button></td>
+            <td><button type="button" onclick="press('2')">2</button></td>
+            <td><button type="button" onclick="press('3')">3</button></td>
+            <td><button type="button" onclick="press('*')">*</button></td>
+        </tr>
+        <tr align="center">
+            <td><button type="button" onclick="press('0')">0</button></td>
+            <td><button type="button" onclick="press('.')">.</button></td>
+            <td><button type="button" onclick="press('/')">/</button></td>
+            <td><button type="button" onclick="press('-')">-</button></td>
+        </tr>
+         <tr align="center">
+            <td colspan="4"><button type="button" class="eq" onclick="press('=')">=</button></td>
+        </tr>
+        
+           
+    </table>
+</body>
+</html>

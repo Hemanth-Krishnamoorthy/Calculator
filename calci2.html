@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Calculator</title>
+    <style>
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #00c6ff, #0072ff); /* gradient background */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Calculator container */
+        .calculator {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Display styling */
+        #display {
+            width: 100%;
+            height: 80px;
+            font-size: 2rem;
+            border-radius: 15px;
+            border: none;
+            margin-bottom: 15px;
+            padding-right: 15px;
+            text-align: right;
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        button {
+            width: 100%;
+            height: 60px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 5px 0px rgba(0,0,0,0.2);
+        }
+
+        /* Number buttons */
+        button:not(.clear-btn):not(.eq):not(.operator) {
+            background-color: #e0e0e0;
+        }
+
+        button:not(.clear-btn):not(.eq):not(.operator):hover {
+            background-color: #d5d5d5;
+        }
+
+        /* Operator buttons */
+        .operator {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        .operator:hover {
+            background-color: #e07b00;
+        }
+
+        /* Clear button */
+        .clear-btn {
+            background-color: #ff3b30;
+            color: white;
+        }
+
+        .clear-btn:hover {
+            background-color: #c12b25;
+        }
+
+        /* Equal button */
+        .eq {
+            background-color: #34c759;
+            color: white;
+            font-weight: bold;
+            height: 60px;
+        }
+
+        .eq:hover {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <table>
+            <tr>
+                <td><button class="clear-btn">C</button></td>
+                <td><button class="operator">/</button></td>
+                <td><button class="operator">*</button></td>
+                <td><button class="operator">-</button></td>
+            </tr>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button class="operator">+</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td rowspan="2"><button class="eq">=</button></td>
+            </tr>
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button>0</button></td>
+                <td><button>.</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
